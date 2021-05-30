@@ -1,6 +1,5 @@
 import {
-  PageContainer,
-  Section
+  PageContainer
 } from '../components/ui'
 import Introduction from '../components/Introduction'
 import FeaturedBook from '../components/FeaturedBook'

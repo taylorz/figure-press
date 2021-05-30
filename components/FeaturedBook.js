@@ -21,7 +21,7 @@ const FeaturedBook = ({ ...rest }) => {
     <Section>
 
       <Grid container justifyContent="center">
-        <Grid item xs={12} md={10}>
+        <Grid item xs={12}>
           <Slideshow
             images={FiguresImages}
             currentBookImage={currentBookImage}
