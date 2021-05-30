@@ -47,17 +47,6 @@ const EndMatter = ({ ...rest }) => {
               </Grid>
             </Grid>
 
-            {/* <Grid item xs={12}>
-              <Grid container>
-                <Grid item>
-                  <Text bold p>Friends of Figure Press</Text>
-                </Grid>
-              </Grid>
-              <Grid container>
-                <Grid item xs={12}><Text>Brilliant Graphics</Text></Grid>
-              </Grid>
-            </Grid> */}
-
           </Grid>
         </Grid>
 
