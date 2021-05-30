@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Div100vh from 'react-div-100vh'
 
+import Footer from "../Footer"
+
 const StyledPageContainer = styled(Div100vh)`
   height: 100vh;
   min-height: 100vh;
@@ -11,7 +13,10 @@ const StyledPageContainer = styled(Div100vh)`
 
 const PageContainer = ({ children }) => {
   return (
-    <StyledPageContainer>{children}</StyledPageContainer>
+    <StyledPageContainer>
+      {children}
+      <Footer />
+    </StyledPageContainer>
   )
 }
 

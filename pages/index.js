@@ -4,6 +4,7 @@ import {
 } from '../components/ui'
 import Introduction from '../components/Introduction'
 import FeaturedBook from '../components/FeaturedBook'
+import EndMatter from '../components/EndMatter'
 
 const Homepage = ({}) => {
 
@@ -12,6 +13,7 @@ const Homepage = ({}) => {
 
       <Introduction />
       <FeaturedBook />
+      <EndMatter />
 
     </PageContainer>
   )

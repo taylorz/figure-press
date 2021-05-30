@@ -10,6 +10,7 @@ const StyledText = styled.span`
   line-height: ${props => props.display ? props.theme.text.lineHeightLarge
     : props.theme.text.lineHeight
   }px;
+  text-align: ${props => props.center && "center"};
   color: ${props => props.link ? props.theme.color.green
     : props.lightened ? props.theme.color.gray
       : props.theme.color.black

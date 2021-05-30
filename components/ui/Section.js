@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer'
 import Maxwidth from "./Maxwidth"
 
 const StyledSection = styled.div`
-  margin-bottom: ${({ theme }) => theme.util.buffer * 30}px;
+  margin-bottom: ${props => props.noMarginBottom ? props.theme.util.buffer * 2 : props.theme.util.buffer * 30}px;
 `;
 
 const Section = ({ children, ...rest }) => {

@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react"
 import styled from "styled-components"
-import { AnimatePresence, motion } from "framer-motion"
 
 const StyledSlideshow = styled.div`
   width: 100%;
@@ -11,7 +9,7 @@ const StyledSlideshow = styled.div`
 `;
 const StyledImageWrapper = styled.div`
 `;
-const StyledSlideshowImage = styled(motion.img)`
+const StyledSlideshowImage = styled.img`
   width: 100%;
 `;
 const StyledPrev = styled.div`
@@ -37,8 +35,7 @@ const StyledNext = styled.div`
   }
 `;
 
-const Slideshow = ({ images, ...rest }) => {
-  const [currentBookImage, setCurrentBookImage] = useState(0)
+const Slideshow = ({ images, currentBookImage, setCurrentBookImage, ...rest }) => {
   const numOfImages = images.length
 
   const onClickNext = () => {
@@ -61,16 +58,7 @@ const Slideshow = ({ images, ...rest }) => {
       <StyledPrev onClick={onClickPrev} />
 
       <StyledImageWrapper>
-        {/* <AnimatePresence initial={true}> */}
-          <StyledSlideshowImage
-            // key={currentBookImage}
-            src={images[currentBookImage]}
-            // initial={{opacity: 0}}
-            // animate={{opacity: 1}}
-            // exit={{opacity: 0}}
-            // transition={{duration: .5}}
-          />
-        {/* </AnimatePresence> */}
+        <StyledSlideshowImage src={images[currentBookImage]} />
       </StyledImageWrapper>
 
       <StyledNext onClick={onClickNext} />

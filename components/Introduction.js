@@ -1,4 +1,5 @@
 import Link from "next/link"
+import styled from "styled-components"
 
 import {
   Grid,
@@ -6,11 +7,16 @@ import {
   Text
 } from '../components/ui'
 
+const StyledImprintName = styled(Grid)`
+  position: fixed;
+  z-index: 2;
+`;
+
 const Announcement = ({key, date, message, link}) => {
   return (
     <Grid container key={key}>
-      <Grid item xs={12} sm={3}><Text italic p link={link}>{date}</Text></Grid>
-      <Grid item xs={12} sm={9}><Text p link={link}>{message}</Text></Grid>
+      <Grid item xs={12} sm={4}><Text italic p link={link}>{date}</Text></Grid>
+      <Grid item xs={12} sm={8}><Text p link={link}>{message}</Text></Grid>
     </Grid>
   )
 }
@@ -20,8 +26,8 @@ const Introduction = ({ ...rest }) => {
     <Section>
         <Grid container>
 
-          <Grid item xs={12} sm={6}>
-            <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} mb={4}>
+            <StyledImprintName container spacing={2}>
               <Grid item>
                 <Text bold>Figure Press</Text>
               </Grid>
@@ -31,7 +37,7 @@ const Introduction = ({ ...rest }) => {
               <Grid item>
                 <Text link>Order <Text italic link>Figures</Text></Text>
               </Grid>
-            </Grid>
+            </StyledImprintName>
           </Grid>
 
           <Grid item xs={12} sm={6}>
@@ -49,8 +55,8 @@ const Introduction = ({ ...rest }) => {
                 </Grid>
                 {InPreparation.map((p, i) =>
                   <Grid container key={i}>
-                    <Grid item xs={12} sm={3}><Text italic>{p.author}</Text></Grid>
-                    <Grid item xs={12} sm={9}><Text>{p.title}</Text></Grid>
+                    <Grid item xs={12} sm={4}><Text italic>{p.author}</Text></Grid>
+                    <Grid item xs={12} sm={8}><Text>{p.title}</Text></Grid>
                   </Grid>
                 )}
               </Grid>
