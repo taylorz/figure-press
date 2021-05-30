@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-div-100vh": "^0.3.5",
     "react-dom": "17.0.2",
+    "react-hook-form": "^7.7.1",
     "react-intersection-observer": "^8.32.0",
     "styled-components": "^5.2.3"
   },

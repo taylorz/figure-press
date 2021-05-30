@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styled from "styled-components"
 
 import {
   Grid,
@@ -6,6 +7,12 @@ import {
   Text
 } from '../components/ui'
 import Slideshow from '../components/Slideshow'
+
+const StyledBookDescription = styled(Grid)`
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}px) {
+    flex-direction: column-reverse;
+  }
+`;
 
 const FeaturedBook = ({ ...rest }) => {
   const [currentBookImage, setCurrentBookImage] = useState(0)
@@ -37,8 +44,8 @@ const FeaturedBook = ({ ...rest }) => {
         </Grid>
       </Grid>
 
-      <Grid container mt={2} flexDirection="row">
-        <Grid item xs={12} sm={6}>
+      <StyledBookDescription container mt={2} flexDirection="row">
+        <Grid item xs={12} sm={6} mb={2}>
           <Text>122 Pages</Text>
           <Text>7.5 x 5 inches</Text>
           <Text>First Edition of 100</Text>
@@ -49,7 +56,7 @@ const FeaturedBook = ({ ...rest }) => {
           <Text display p>The photographs here were taken by both of us over the span of several years, well before we had ever discussed them with one another, and well before we had the idea of developing them into a book. Indeed, the images are simply documentations of experience, evidence of impulses, the result of not not being able to photograph a condition before us.</Text>
           <Text display p>At first, our focus was entirely on the subject matter of the photographs themselves: images of trees, grass, window frames, flowers, or an open car door. As we looked at them together, the sense of a slowly gathering, shared quality in the photographs encouraged a more deliberate comparison.</Text>
         </Grid>
-      </Grid>
+      </StyledBookDescription>
 
     </Section>
   )

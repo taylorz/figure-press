@@ -5,6 +5,7 @@ import {
   Section,
   Text
 } from "../components/ui"
+import Newsletter from "../components/Newsletter"
 
 const EndMatter = ({ ...rest }) => {
   return (
@@ -41,8 +42,8 @@ const EndMatter = ({ ...rest }) => {
                 </Grid>
               </Grid>
               <Grid container>
-                <Grid item xs={12} sm={4}><Text italic>Subscribe to our Newsletter</Text></Grid>
-                <Grid item xs={12} sm={8}><Text lightened>Your email</Text></Grid>
+                <Grid item xs={12} sm={4}><Text italic>Sign up for our newsletter</Text></Grid>
+                <Grid item xs={12} sm={8}><Newsletter /></Grid>
               </Grid>
             </Grid>
 
