@@ -1,16 +1,19 @@
-import styled from "styled-components"
-import { AnimatePresence } from "framer-motion"
-
-const StyledLayout = styled.div`
-
-`;
+import { AnimatePresence, motion } from "framer-motion"
+import { useRouter } from "next/router"
 
 const Layout = ({ children }) => {
+  const path = useRouter().pathname
+
   return (
     <AnimatePresence exitBeforeEnter>
-      <StyledLayout>
-          {children}
-      </StyledLayout>
+      <motion.div
+        key={path}
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+      >
+        {children}
+      </motion.div>
     </AnimatePresence>
   )
 }

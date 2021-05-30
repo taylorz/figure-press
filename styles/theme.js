@@ -60,9 +60,8 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     font-family: ${({ theme }) => theme.text.family};
     text-decoration: none;
-    /* color: ${({ theme }) => theme.color.black}; */
-    &:visited {
-      /* color: ${({ theme }) => theme.color.black}; */
+    &:hover {
+      cursor: pointer;
     }
   }
 `;

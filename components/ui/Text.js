@@ -22,7 +22,7 @@ const StyledText = styled.span`
   display: ${props => (props.p || props.line) ? 'block'
     : 'inline'
   };
-  cursor: ${props => props.link && "pointer"};
+  cursor: ${props => (props.link || props.hoverable) && "pointer"};
 `;
 
 const Text = ({

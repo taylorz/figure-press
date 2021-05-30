@@ -7,11 +7,6 @@ import {
   Text
 } from '../components/ui'
 
-const StyledImprintName = styled(Grid)`
-  position: fixed;
-  z-index: 2;
-`;
-
 const Announcement = ({key, date, message, link}) => {
   return (
     <Grid container key={key}>
@@ -26,19 +21,7 @@ const Introduction = ({ ...rest }) => {
     <Section>
         <Grid container>
 
-          <Grid item xs={12} sm={6} mb={4}>
-            <StyledImprintName container spacing={2}>
-              <Grid item>
-                <Text bold>Figure Press</Text>
-              </Grid>
-              <Grid item>
-                <Text lightened>Cart</Text>
-              </Grid>
-              <Grid item>
-                <Text link>Order <Text italic link>Figures</Text></Text>
-              </Grid>
-            </StyledImprintName>
-          </Grid>
+          <Grid item xs={12} sm={6} />
 
           <Grid item xs={12} sm={6}>
             <Grid container spacing={4}>

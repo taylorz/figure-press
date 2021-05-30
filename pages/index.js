@@ -5,6 +5,7 @@ import {
 import Introduction from '../components/Introduction'
 import FeaturedBook from '../components/FeaturedBook'
 import EndMatter from '../components/EndMatter'
+import Footer from "../components/Footer"
 
 const Homepage = ({}) => {
 
@@ -14,6 +15,7 @@ const Homepage = ({}) => {
       <Introduction />
       <FeaturedBook />
       <EndMatter />
+      <Footer />
 
     </PageContainer>
   )

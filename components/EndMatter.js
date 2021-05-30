@@ -33,6 +33,10 @@ const EndMatter = ({ ...rest }) => {
                 <Grid item xs={12} sm={4}><Text italic>Instagram</Text></Grid>
                 <Grid item xs={12} sm={8}><a href="https://instagram.com/figurepress" target="_blank"><Text link>@figurepress</Text></a></Grid>
               </Grid>
+              <Grid container>
+                <Grid item xs={12} sm={4}><Text italic>Email</Text></Grid>
+                <Grid item xs={12} sm={8}><a href="mailto:figurepress@gmail.com"><Text link>figurepress@gmail.com</Text></a></Grid>
+              </Grid>
             </Grid>
 
             <Grid item xs={12}>
