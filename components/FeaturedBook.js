@@ -39,7 +39,7 @@ const FeaturedBook = ({ ...rest }) => {
           <Text italic>Matthew Ransom, Taylor Zanke</Text>
           <Text>$32.00</Text>
         </Grid>
-        <Grid item xs={12} sm={4} alignItems="flex-end" justifyContent="flex-end" mt={4}>
+        <Grid item xs={12} sm={4} alignItems="flex-end" justifyContent="flex-end">
           <Text link>Add to cart</Text>
         </Grid>
       </Grid>

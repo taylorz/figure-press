@@ -66,7 +66,7 @@ const Newsletter = ({ ...rest }) => {
         :
           <form onSubmit={handleSubmit(onSubmit)} style={{width: '100%'}}>
             <Grid container justifyContent="space-between">
-              <Grid item xs={12} sm={10}>
+              <Grid item xs={10}>
                 <StyledInput
                   {...register('email', {
                     required: true,
@@ -81,7 +81,7 @@ const Newsletter = ({ ...rest }) => {
                 {errors.email && <Text lightened>{errors.email.message}</Text>}
               </Grid>
 
-              <Grid item xs={12} sm={2} justifyContent="flex-end">
+              <Grid item xs={2} justifyContent="flex-end">
                 <StyledButton
                   type="submit"
                   disabled={!isValid || !isDirty}
