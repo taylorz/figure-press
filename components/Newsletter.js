@@ -78,7 +78,13 @@ const Newsletter = ({ ...rest }) => {
                   })}
                   placeholder="Your email"
                 />
-                {errors.email && <Text lightened>{errors.email.message}</Text>}
+                {errors.email &&
+                  <Grid container>
+                    <Grid item mt={2}>
+                      <Text lightened>{errors.email.message}</Text>
+                    </Grid>
+                  </Grid>
+                }
               </Grid>
 
               <Grid item xs={2} justifyContent="flex-end">
