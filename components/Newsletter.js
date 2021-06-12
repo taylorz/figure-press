@@ -40,7 +40,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const Newsletter = ({ ...rest }) => {
+const Newsletter = () => {
   const {
     register,
     handleSubmit,

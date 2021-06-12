@@ -1,5 +1,4 @@
 import Link from "next/link"
-import styled from "styled-components"
 
 import {
   Grid,
@@ -16,7 +15,7 @@ const Announcement = ({key, date, message, link}) => {
   )
 }
 
-const Introduction = ({ ...rest }) => {
+const Introduction = () => {
   return (
     <Section isPageTop>
       <Grid container>
