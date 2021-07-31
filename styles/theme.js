@@ -31,12 +31,13 @@ export const theme = {
     lineHeight: 16,
     sizeLarge: 20,
     lineHeightLarge: 24,
-    family: 'Atlas Grotesk, Helvetica Neue, sans-serif'
+    family: 'Atlas Grotesk Regular, Helvetica Neue, sans-serif'
   }
 };
 
 // Global styles:
 export const GlobalStyle = createGlobalStyle`
+
   body, html {
     margin: 0 !important;
     -webkit-overflow-scrolling: touch;

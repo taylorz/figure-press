@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Atlas Grotesk Regular';
+  font-display: block; /* No longer causing FOUT */
+  src: local('Atlas Grotesk Regular'), local('atlasGroteskRegular'),
+  url('./atlas/AtlasGrotesk-Regular-Web.eot') format('eot'),
+  url('./atlas/AtlasGrotesk-Regular-Web.woff') format('woff'),
+  url('./atlas/AtlasGrotesk-Regular-Web.woff2') format('woff2');
+}
