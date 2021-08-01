@@ -9,8 +9,8 @@ import {
 const Announcement = ({key, date, message, link}) => {
   return (
     <Grid container key={key}>
-      <Grid item xs={12} sm={4}><Text italic p link={link}>{date}</Text></Grid>
-      <Grid item xs={12} sm={8}><Text p link={link}>{message}</Text></Grid>
+      <Grid item xs={6} sm={4}><Text italic p link={link}>{date}</Text></Grid>
+      <Grid item xs={6} sm={8}><Text p link={link}>{message}</Text></Grid>
     </Grid>
   )
 }
