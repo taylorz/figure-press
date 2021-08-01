@@ -3,7 +3,7 @@ import styled from "styled-components"
 const StyledText = styled.span`
   font-family: ${({ theme }) => theme.text.family};
   font-style: ${props => props.italic ? "italic" : "none"};
-  font-weight: ${props => props.bold ? "500" : "auto"};
+  font-weight: ${props => props.bold ? "bold" : "auto"};
   font-size: ${props => props.display ? props.theme.text.sizeLarge
     : props.theme.text.size
   }px;

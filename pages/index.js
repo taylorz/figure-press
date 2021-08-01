@@ -10,23 +10,10 @@ import Footer from "../components/Footer"
 
 const Homepage = ({}) => {
 
-  const {
-		createShop,
-		createCheckout,
-		fetchProducts,
-		// fetchCollection,
-	} = useShopify()
+  const { products, fetchProduct, cartStatus, cartCount } = useShopify()
 
-	useEffect(() => {
-		createShop()
-		fetchProducts()
-		createCheckout()
-		// fetchCollection()
-	}, [])
-
-  const { products, fetchProduct } = useShopify()
-
-  console.log({products})
+  // console.log({products})
+  // console.log({cartCount})
 
   return (
 

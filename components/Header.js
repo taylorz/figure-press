@@ -1,5 +1,8 @@
+import { useEffect } from "react"
 import styled from "styled-components"
 import Link from "next/link"
+
+import { useShopify } from "../hooks"
 
 import {
   Maxwidth,
@@ -13,15 +16,47 @@ const StyledHeader = styled(Grid)`
   z-index: 2;
 `;
 
-const Footer = ({ ...rest }) => {
+const Header = ({ ...rest }) => {
+
+  const { cartCount, cartStatus, checkoutState, setCount } = useShopify()
+
+  const handleOpen = (e) => {
+    e.preventDefault()
+    openCart()
+  }
+  const handleClose = (e) => {
+    e.preventDefault()
+    closeCart()
+  }
+
+  useEffect(() => {
+
+		const getCount = () => {
+			let lineItems =
+				checkoutState.lineItems && checkoutState.lineItems.length > 0
+					? checkoutState.lineItems
+					: []
+			let count = 0
+			lineItems.forEach((item) => {
+				count += item.quantity
+				return count
+			})
+			setCount(count)
+		}
+		getCount()
+
+  }, [cartStatus, checkoutState])
+
+  // console.log("header, checkoutState", checkoutState.lineItems[0])
+
   return (
     <Maxwidth>
       <StyledHeader container spacing={2}>
         <Grid item>
-          <Link href="/"><Text bold hoverable>Figure Press</Text></Link>
+          <Link href="/" onClick={(e) => handleClose(e)}><Text bold hoverable>Figure Press</Text></Link>
         </Grid>
         <Grid item>
-          <Link href="/cart"><Text lightened hoverable>Cart</Text></Link>
+          <Link href="/cart" onClick={(e) => handleOpen(e)}><Text lightened={!cartCount} link={cartCount} hoverable>Cart {cartCount ? `( ${cartCount} )` : null}</Text></Link>
         </Grid>
         <Grid item>
           <Text link>Order <Text italic link>Figures</Text></Text>
@@ -31,4 +66,4 @@ const Footer = ({ ...rest }) => {
   )
 }
 
-export default Footer
+export default Header

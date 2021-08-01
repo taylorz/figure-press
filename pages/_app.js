@@ -8,6 +8,7 @@ import Head from 'next/head'
 
 import { Layout } from '../components/ui'
 import Header from '../components/Header'
+import AppWrapper from '../components/AppWrapper'
 
 function App({
   Component,
@@ -33,11 +34,14 @@ function App({
             exit={{opacity: 0}}
             transition={{duration: 1}}
           >
+            <AppWrapper>
 
-            <Header />
-            <Layout>
-              <Component key={router.pathname} {...pageProps} />
-            </Layout>
+              <Header />
+              <Layout>
+                <Component key={router.pathname} {...pageProps} />
+              </Layout>
+
+            </AppWrapper>
 
           </motion.div>
         </AnimatePresence>
