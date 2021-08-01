@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
 const StyledText = styled.span`
-  font-family: ${({ theme }) => theme.text.family};
+  font-family: ${props => props.bold ? props.theme.text.familyBold : props.theme.text.familyRegular};
   font-style: ${props => props.italic ? "italic" : "none"};
-  font-weight: ${props => props.bold ? "500" : "auto"};
   font-size: ${props => props.display ? props.theme.text.sizeLarge
     : props.theme.text.size
   }px;

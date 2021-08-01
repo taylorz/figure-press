@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useShopify } from "../hooks"
 import {
   PageContainer
 } from '../components/ui'
@@ -8,15 +10,31 @@ import Footer from "../components/Footer"
 
 const Homepage = ({}) => {
 
+  const { products, fetchProduct, cartStatus, cartCount } = useShopify()
+
+  // console.log({products})
+  // console.log({cartCount})
+
   return (
+
     <PageContainer>
 
       <Introduction />
-      <FeaturedBook />
+      {products.map((p, i) =>
+        <FeaturedBook
+          productId={p.id}
+          images={p.images}
+          title={p.title}
+          price={p.variants[0].price}
+          description={p.description}
+          // author={p.}
+        />
+      )}
       <EndMatter />
       <Footer />
 
     </PageContainer>
+
   )
 }
 

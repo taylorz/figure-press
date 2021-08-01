@@ -32,7 +32,7 @@ const Introduction = () => {
             <Grid item xs={12}>
               <Grid container>
                 <Grid item>
-                  <Text bold p>In Preparation</Text>
+                  <Text bold p>Books in Preparation</Text>
                 </Grid>
               </Grid>
               {InPreparation.map((p, i) =>
@@ -72,17 +72,17 @@ export default Introduction
 const InPreparation = [
   {
     author: "Taylor Zanke",
-    title: "Quis Nostrud Exercitation"
+    // title: "Untitled"
   },
   {
     author: "Matthew Ransom",
-    title: "Fugiat quo voluptas nulla pariatur"
+    // title: "Untitled"
   }
 ]
 
 const Announcements = [
   {
-    date: "June 2021",
+    date: "August 2021",
     message: "Figures is available for purchase here on our website.",
     link: "https://www.google.com/"
   },

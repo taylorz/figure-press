@@ -58,7 +58,7 @@ const Slideshow = ({ images, currentBookImage, setCurrentBookImage, ...rest }) =
       <StyledPrev onClick={onClickPrev} />
 
       <StyledImageWrapper>
-        <StyledSlideshowImage src={images[currentBookImage]} />
+        <StyledSlideshowImage src={images[currentBookImage].src} />
       </StyledImageWrapper>
 
       <StyledNext onClick={onClickNext} />
