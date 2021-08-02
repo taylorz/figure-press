@@ -23,8 +23,8 @@ export const theme = {
   color: {
     white: '#FFFFFF',
     black: '#222222',
-    gray: '#CCCCCC',
-    green: 'green'
+    gray: '#BBBBBB',
+    green: 'green',
   },
   text: {
     size: 14,

@@ -76,7 +76,7 @@ const FeaturedBook = ({
 
 
   return (
-    <Section>
+    <Section id="figures">
 
       <Grid container justifyContent="center">
         <Grid item xs={12}>

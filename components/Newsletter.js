@@ -16,7 +16,7 @@ const StyledInput = styled.input`
   background: none;
   font-size: ${({ theme }) => theme.text.size}px;
   line-height: ${({ theme }) => theme.text.lineHeight}px;
-  font-family: ${({ theme }) => theme.text.family};
+  font-family: ${({ theme }) => theme.text.familyRegular};
   -webkit-box-shadow: 0 0 0 30px white inset !important;
   &::placeholder {
     color: ${({ theme }) => theme.color.gray};
@@ -31,7 +31,7 @@ const StyledButton = styled.button`
   background: none;
   font-size: ${({ theme }) => theme.text.size}px;
   line-height: ${({ theme }) => theme.text.lineHeight}px;
-  font-family: ${({ theme }) => theme.text.family};
+  font-family: ${({ theme }) => theme.text.familyRegular};
   color: ${props => props.disabled ? props.theme.color.gray : props.theme.color.green};
   transition: ${({ theme }) => theme.util.transition};
   pointer-events: ${props => props.disabled ? "none" : "auto"};

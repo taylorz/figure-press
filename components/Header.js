@@ -53,13 +53,19 @@ const Header = ({ ...rest }) => {
     <Maxwidth>
       <StyledHeader container spacing={2}>
         <Grid item>
-          <Link href="/" onClick={(e) => handleClose(e)}><Text bold hoverable>Figure Press</Text></Link>
+          <Link href="/" onClick={(e) => handleClose(e)}>
+            <Text bold hoverable>Figure Press</Text>
+          </Link>
         </Grid>
         <Grid item>
-          <Link href="/cart" onClick={(e) => handleOpen(e)}><Text lightened={!cartCount} link={cartCount} hoverable>Cart {cartCount ? `( ${cartCount} )` : null}</Text></Link>
+          <Link href="/cart" onClick={(e) => handleOpen(e)}>
+            <Text lightened={!cartCount} link={cartCount} hoverable>Cart {cartCount ? `( ${cartCount} )` : null}</Text>
+          </Link>
         </Grid>
         <Grid item>
-          <Text link>Order <Text italic link>Figures</Text></Text>
+          <Link href="/#figures" scroll={false}>
+            <Text link><Text italic link>Figures</Text> out now!</Text>
+          </Link>
         </Grid>
       </StyledHeader>
     </Maxwidth>

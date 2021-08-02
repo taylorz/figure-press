@@ -51,9 +51,9 @@ const Introduction = () => {
               </Grid>
               {Announcements.map((a, i) =>
                 a.link ?
-                <Link href="#figures">
+                // <Link href={a.link}>
                   <Announcement key={i} date={a.date} message={a.message} link={a.link}/>
-                </Link>
+                // </Link>
                 :
                 <Announcement key={i} date={a.date} message={a.message}/>
               )}
@@ -84,7 +84,7 @@ const Announcements = [
   {
     date: "August 2021",
     message: "Figures is available for purchase here on our website.",
-    link: "https://www.google.com/"
+    // link: "/#figures"
   },
   {
     date: "May 2021",
