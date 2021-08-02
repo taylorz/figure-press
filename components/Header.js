@@ -53,12 +53,12 @@ const Header = ({ ...rest }) => {
     <Maxwidth>
       <StyledHeader container spacing={2}>
         <Grid item>
-          <Link href="/" onClick={(e) => handleClose(e)}>
+          <Link href="/">
             <Text bold hoverable>Figure Press</Text>
           </Link>
         </Grid>
         <Grid item>
-          <Link href="/cart" onClick={(e) => handleOpen(e)}>
+          <Link href="/cart">
             <Text lightened={!cartCount} link={cartCount} hoverable>Cart {cartCount ? `( ${cartCount} )` : null}</Text>
           </Link>
         </Grid>

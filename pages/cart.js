@@ -26,7 +26,7 @@ const Cart = ({}) => {
 
   const openCheckout = (e) => {
     e.preventDefault()
-		window.location.replace(checkoutState.webUrl) // opens checkout in same window
+		window.open(checkoutState.webUrl)
   }
 
   return (
