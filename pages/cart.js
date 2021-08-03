@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import styled from 'styled-components'
 
 import { useShopify } from "../hooks"
@@ -40,52 +41,88 @@ const Cart = ({}) => {
           <Grid item xs={12} sm={6}>
             <Text bold p>Cart</Text>
             <Grid container>
-              {cartCount ?
-                checkoutState.lineItems.map((l, i) =>
-                  <Grid item key={i} xs={12}>
-                    <CartItem
-                      title={l.title}
-                      price={l.variant.price}
-                      quantity={l.quantity}
-                      lineItemId={l.id}
-                    />
-                  </Grid>
-                )
-              :
-                <Grid item>
-                  <Text lightened>Your cart is empty.</Text>
-                </Grid>
-              }
+
+              <AnimatePresence exitBeforeEnter>
+                {cartCount &&
+                  checkoutState.lineItems.map((l, i) =>
+                    <motion.div
+                      key={cartCount}
+                      initial={{opacity: 0}}
+                      animate={{opacity: 1}}
+                      exit={{opacity: 0}}
+                      transition={{duration: .25}}
+                      style={{width: '100%'}}
+                    >
+                      <Grid item key={i} xs={12}>
+                        <CartItem
+                          title={l.title}
+                          price={l.variant.price}
+                          quantity={l.quantity}
+                          lineItemId={l.id}
+                        />
+                      </Grid>
+                    </motion.div>
+                  )
+                }
+              </AnimatePresence>
+
+              <AnimatePresence exitBeforeEnter>
+                {!cartCount &&
+                  <motion.div
+                    key={cartCount}
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    exit={{opacity: 0}}
+                    transition={{duration: .25}}
+                    style={{width: '100%', position: 'absolute'}}
+                  >
+                    <Grid item>
+                      <Text lightened>Your cart is empty.</Text>
+                    </Grid>
+                  </motion.div>
+                }
+              </AnimatePresence>
+
             </Grid>
           </Grid>
 
         </Grid>
       </Section>
 
-      {cartCount ?
-        <StyledBottomSection noMarginBottom>
-          <Grid container style={{height: '100%'}} >
-            <Grid item xs={12} sm={6} />
-            <Grid item xs={12} sm={6}>
-              <Grid container justifyContent="space-between">
-                <Grid item>
-                  <Grid container spacing={2}>
+      <AnimatePresence exitBeforeEnter>
+        {cartCount ?
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: .25}}
+          >
+            <StyledBottomSection smallMarginBottom>
+              <Grid container style={{height: '100%'}} >
+                <Grid item xs={12} sm={6} />
+                <Grid item xs={12} sm={6}>
+                  <Grid container justifyContent="space-between">
                     <Grid item>
-                      <Text>Subtotal</Text>
+                      <Grid container spacing={2}>
+                        <Grid item>
+                          <Text>Subtotal</Text>
+                        </Grid>
+                        <Grid item>
+                          <Text>${checkoutState.subtotalPrice}</Text>
+                        </Grid>
+                      </Grid>
                     </Grid>
                     <Grid item>
-                      <Text>${checkoutState.subtotalPrice}</Text>
+                      <Text link onClick={(e) => openCheckout(e)}>Checkout</Text>
                     </Grid>
                   </Grid>
                 </Grid>
-                <Grid item>
-                  <Text link onClick={(e) => openCheckout(e)}>Checkout</Text>
-                </Grid>
               </Grid>
-            </Grid>
-          </Grid>
-        </StyledBottomSection>
-      : null}
+            </StyledBottomSection>
+          </motion.div>
+        : null
+        }
+      </AnimatePresence>
 
     </PageContainer>
   )

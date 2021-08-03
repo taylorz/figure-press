@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import axios from "axios"
 import { useForm } from "react-hook-form"
+import { motion, AnimatePresence } from "framer-motion"
 
 import {
   Grid,
@@ -78,13 +79,24 @@ const Newsletter = () => {
                   })}
                   placeholder="Your email"
                 />
-                {errors.email &&
-                  <Grid container>
-                    <Grid item mt={2}>
-                      <Text lightened>{errors.email.message}</Text>
-                    </Grid>
-                  </Grid>
-                }
+
+                <AnimatePresence exitBeforeEnter>
+                  {errors.email &&
+                    <motion.div
+                      initial={{opacity: 0}}
+                      animate={{opacity: 1}}
+                      exit={{opacity: 0}}
+                      transition={{duration: .25}}
+                    >
+                      <Grid container>
+                        <Grid item mt={2}>
+                          <Text lightened>{errors.email.message}</Text>
+                        </Grid>
+                      </Grid>
+                    </motion.div>
+                  }
+                </AnimatePresence>
+
               </Grid>
 
               <Grid item xs={2} justifyContent="flex-end">
