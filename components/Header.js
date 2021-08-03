@@ -64,7 +64,7 @@ const Header = ({ ...rest }) => {
         </Grid>
         <Grid item>
           <Link href="/#figures" scroll={false}>
-            <Text link><Text italic link>Figures</Text> out now!</Text>
+            <Text link><Text italic link>Figures</Text> is out now!</Text>
           </Link>
         </Grid>
       </StyledHeader>
