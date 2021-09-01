@@ -115,7 +115,7 @@ const FeaturedBook = ({
           <Text>122 Pages</Text>
           <Text>7.5 x 5 inches</Text>
           <Text>First Edition of 100</Text>
-          <Text>ISBN 978-1-7372541-9-2</Text>
+          <Text>ISBN 978-1-7372541-0-2</Text>
         </Grid>
         <Grid item xs={12} sm={6}>
           <StyledDescriptionText display p>{description}</StyledDescriptionText>
