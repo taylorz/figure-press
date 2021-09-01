@@ -19,8 +19,8 @@ const EndMatter = ({ ...rest }) => {
           <Grid container spacing={4}>
 
             <Grid item xs={12}>
-              <Text display italic p>One day, quite some time ago, I happened on a photograph of Napoleon’s youngest brother, Jerome, taken in 1852. And I realized then, with an amazement I have not been able to lessen since: ‘I am looking at eyes that looked at the Emperor.’ Sometimes I would mention this amazement, but since no one seemed to share it, nor even to understand it (life consists of these little touches of solitude), I forgot about it.</Text>
-              <Text>Roland Barthes, Camera Lucida: Reflections on Photography</Text>
+              <Text display italic p>…the book creates meaning, the meaning creates life.</Text>
+              <Text>Roland Barthes, The Pleasure of the Text</Text>
             </Grid>
 
             <Grid item xs={12}>
