@@ -19,7 +19,7 @@ const EndMatter = ({ ...rest }) => {
           <Grid container spacing={4}>
 
             <Grid item xs={12}>
-              <Text display italic p>…the book creates meaning, the meaning creates life.</Text>
+              <Text display italic p>"…the book creates meaning, the meaning creates life."</Text>
               <Text>Roland Barthes, The Pleasure of the Text</Text>
             </Grid>
 
