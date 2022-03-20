@@ -1,11 +1,15 @@
+
 import {
   Grid,
   Text
 } from './ui'
 
 const BookItem = () => {
+  const FiguresCover = '/assets/images/figures-cover.png'
+
   return (
     <Grid container flexDirection="column" spacing={4}>
+
       <Grid item>
         <Text bold>Figures</Text>
         <Text bold>Matthew Ransom, Taylor Zanke</Text>
@@ -17,6 +21,10 @@ const BookItem = () => {
       </Grid>
       <Grid item>
         <Text bold>$32.00</Text>
+      </Grid>
+
+      <Grid item>
+        <img src={FiguresCover} style={{width: '100%'}} />
       </Grid>
     </Grid>
   )
