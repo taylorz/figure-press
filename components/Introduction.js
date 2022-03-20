@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react'
+import { useMediaQuery } from 'react-responsive'
+
 import { theme } from '../styles/theme'
 import {
   Grid,
@@ -5,7 +8,16 @@ import {
   Text
 } from '../components/ui'
 
-const Introduction = ({ isXs }) => {
+const Introduction = () => {
+  const [isXs, setIsXs] = useState(false)
+  const getXs = useMediaQuery(
+    { maxDeviceWidth: theme.breakpoint.xs },
+  )
+
+  useEffect(() => {
+    setIsXs(getXs)
+  })
+
 
   return (
     <Section>

@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import { useMediaQuery } from 'react-responsive'
-import { theme } from '../styles/theme'
 
 import {
   PageContainer,
@@ -13,9 +11,6 @@ import Team from '../components/Team'
 import Footer from '../components/Footer'
 
 const Homepage = ({}) => {
-  const isXs = useMediaQuery(
-    { maxWidth: theme.breakpoint.xs },
-  )
 
   return (
 
@@ -34,7 +29,7 @@ const Homepage = ({}) => {
 
       <PageContainer>
 
-        <Introduction isXs={isXs}/>
+        <Introduction />
 
         <Section>
           <Grid container spacing={12}>
