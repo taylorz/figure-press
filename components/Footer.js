@@ -4,14 +4,12 @@ import {
   Text
 } from "../components/ui"
 
-const Footer = ({ ...rest }) => {
+const Footer = () => {
   return (
     <Section noMarginBottom>
       <Grid container>
-        <Grid item xs={12} sm={6} />
-        <Grid item xs={12}sm={6}>
-          <Text>Figure Press is a collaboration between Matthew Ransom and Taylor Zanke.</Text>
-          <Text>Copyright &copy; Figure Press {new Date().getFullYear()}</Text>
+        <Grid item xs={12} sm={6} mt={24}>
+          <Text bold>Copyright &copy; Figure Press {new Date().getFullYear()}</Text>
         </Grid>
       </Grid>
     </Section>

@@ -2,12 +2,14 @@ import Head from 'next/head'
 import { useEffect } from 'react'
 import { useShopify } from "../hooks"
 import {
-  PageContainer
+  PageContainer,
+  Grid,
+  Section
 } from '../components/ui'
 import Introduction from '../components/Introduction'
-import FeaturedBook from '../components/FeaturedBook'
-import EndMatter from '../components/EndMatter'
-import Footer from "../components/Footer"
+import BookItem from '../components/BookItem'
+import Team from '../components/Team'
+import Footer from '../components/Footer'
 
 const Homepage = ({}) => {
 
@@ -37,18 +39,17 @@ const Homepage = ({}) => {
       <PageContainer>
 
         <Introduction />
-        {products.map((p, i) =>
-          <FeaturedBook
-            key={i}
-            productId={p.id}
-            images={p.images}
-            title={p.title}
-            price={p.variants[0].price}
-            description={p.description}
-            // author={p.}
-          />
-        )}
-        <EndMatter />
+
+        <Section>
+          <Grid container spacing={12}>
+            <Grid item xs={12} sm={4}>
+              <BookItem />
+            </Grid>
+          </Grid>
+        </Section>
+
+        {/* <Team /> */}
+
         <Footer />
 
       </PageContainer>

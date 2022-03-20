@@ -9,7 +9,7 @@ const StyledSection = styled.div`
   margin-bottom: ${props => props.noMarginBottom ?
     0
       : props.smallMarginBottom ? props.theme.util.buffer * 2
-        : props.theme.util.buffer * 30
+        : props.theme.util.buffer * 12
   }px;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}px) {
     margin-top: ${props => props.isPageTop && props.theme.util.buffer * 4}px;

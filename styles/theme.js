@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 // Style values:
-const buffer = 8;
+const buffer = 4;
 const timing = '.15s';
 const easing = 'ease-in-out';
 
@@ -29,8 +29,8 @@ export const theme = {
   text: {
     size: 14,
     lineHeight: 16,
-    sizeLarge: 20,
-    lineHeightLarge: 24,
+    sizeLarge: 24,
+    lineHeightLarge: 28,
     familyRegular: 'Atlas Grotesk Regular, Helvetica Neue, sans-serif',
     familyBold: 'Atlas Grotesk Bold, Helvetica Neue, sans-serif',
   }
