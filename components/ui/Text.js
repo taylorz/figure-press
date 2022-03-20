@@ -23,6 +23,19 @@ const StyledText = styled.span`
     : 'inline'
   };
   cursor: ${props => (props.link || props.hoverable) && "pointer"};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}px) {
+    font-size: ${props => props.display ? props.theme.text.size
+      : props.theme.text.size
+    }px;
+    line-height: ${props => props.display ? props.theme.text.lineHeight
+      : props.theme.text.lineHeight
+    }px;
+    margin-bottom: ${props => (props.p && props.display) ? props.theme.text.lineHeight
+      : props.p ? props.theme.text.lineHeight
+        : 0
+    }px;
+  }
 `;
 
 const Text = ({

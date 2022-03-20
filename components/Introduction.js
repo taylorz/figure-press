@@ -1,3 +1,6 @@
+import { useMediaQuery } from 'react-responsive'
+
+import { theme } from '../styles/theme'
 import {
   Grid,
   Section,
@@ -5,13 +8,18 @@ import {
 } from '../components/ui'
 
 const Introduction = () => {
+
+  const isXs = useMediaQuery(
+    { maxDeviceWidth: theme.breakpoint.xs },
+  )
+
   return (
     <Section>
-      <Grid container spacing={12}>
+      <Grid container spacing={isXs ? null : 12}>
 
         <Grid item xs={12} sm={6}>
           <Text display bold p>Figure Press is an independent publishing project concerned with sustaining practices for thinking, making, and collaborating. Primarily, we're interested in how the form of the book, and the processes of its production, can enable delicate new ideas to take shape.</Text>
-          <Text display bold>We publish small editions of hand made books in order to enable a slow and long-form practice.</Text>
+          <Text display bold p>We publish small editions of hand made books in order to enable a slow and long-form practice.</Text>
         </Grid>
 
         <Grid item xs={12} sm={6}>
