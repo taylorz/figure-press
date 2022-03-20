@@ -15,7 +15,7 @@ const Introduction = () => {
 
   return (
     <Section>
-      <Grid container spacing={isXs ? null : 12}>
+      <Grid container spacing={isXs ? 0 : 12}>
 
         <Grid item xs={12} sm={6}>
           <Text display bold p>Figure Press is an independent publishing project concerned with sustaining practices for thinking, making, and collaborating. Primarily, we're interested in how the form of the book, and the processes of its production, can enable delicate new ideas to take shape.</Text>

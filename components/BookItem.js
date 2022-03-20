@@ -11,6 +11,7 @@ const BookItem = () => {
     <Grid container flexDirection="column" spacing={4}>
 
       <Grid item>
+        <Text bold>FP 1</Text>
         <Text bold>Figures</Text>
         <Text bold>Matthew Ransom, Taylor Zanke</Text>
       </Grid>
