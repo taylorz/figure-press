@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import Head from 'next/head'
 
 import { Layout } from '../components/ui'
-import AppWrapper from '../components/AppWrapper'
 
 function App({
   Component,
@@ -33,13 +32,10 @@ function App({
             exit={{opacity: 0}}
             transition={{duration: 1}}
           >
-            <AppWrapper>
 
               <Layout>
                 <Component key={router.pathname} {...pageProps} />
               </Layout>
-
-            </AppWrapper>
 
           </motion.div>
         </AnimatePresence>
