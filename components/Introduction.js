@@ -10,7 +10,7 @@ const Introduction = () => {
       <Grid container spacing={12}>
 
         <Grid item xs={12} sm={6}>
-          <Text display bold p>Warm greetings from Figure Press. We are an independent publishing project interested in sustaining practices for thinking, making, and collaborating. Primarily, we're interested in how the form of the book, and the processes of its production, can enable delicate new ideas to take shape.</Text>
+          <Text display bold p>Figure Press is an independent publishing project concerned with sustaining practices for thinking, making, and collaborating. Primarily, we're interested in how the form of the book, and the processes of its production, can enable delicate new ideas to take shape.</Text>
           <Text display bold>We publish small editions of hand made books in order to enable a slow and long-form practice.</Text>
         </Grid>
 
