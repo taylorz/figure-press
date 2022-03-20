@@ -37,19 +37,6 @@ const Homepage = ({}) => {
       <PageContainer>
 
         <Introduction />
-        {products.map((p, i) =>
-          <FeaturedBook
-            key={i}
-            productId={p.id}
-            images={p.images}
-            title={p.title}
-            price={p.variants[0].price}
-            description={p.description}
-            // author={p.}
-          />
-        )}
-        <EndMatter />
-        <Footer />
 
       </PageContainer>
 

@@ -6,60 +6,20 @@ import {
   Text
 } from '../components/ui'
 
-const Announcement = ({key, date, message, link}) => {
-  return (
-    <Grid container key={key}>
-      <Grid item xs={6} sm={4}><Text italic p link={link}>{date}</Text></Grid>
-      <Grid item xs={6} sm={8}><Text p link={link}>{message}</Text></Grid>
-    </Grid>
-  )
-}
-
 const Introduction = () => {
   return (
-    <Section isPageTop>
-      <Grid container>
-
-        <Grid item xs={12} sm={6} />
+    <Section>
+      <Grid container spacing={12}>
 
         <Grid item xs={12} sm={6}>
-          <Grid container spacing={4}>
+          <Text display bold p>Warm greetings from Figure Press. We are an independent publishing project interested in sustaining practices for thinking, making, and collaborating. Primarily, we're interested in how the form of the book, and the processes of its production, can enable delicate new ideas to take shape.</Text>
+          <Text display bold>We publish small editions of hand made books in order to enable a slow and long-form process.</Text>
+        </Grid>
 
-            <Grid item xs={12}>
-              <Text display>Figure Press is a publishing project that uses the form of the book, and the processes of its production, to develop and sustain practices for thinking, making, and collaborating. Rigorously imprecise, and decidedly open-ended, Figure Press eagerly examines the process of bringing delicate new ideas to form. Through close collaboration, friendly critique, and often intentionally prolonged conversation, Figure Press provides a framework to support and sustain artistic development and intellectual curiosity in the face of practical demands.</Text>
-            </Grid>
-
-            <Grid item xs={12}>
-              <Grid container>
-                <Grid item>
-                  <Text bold p>Books in Preparation</Text>
-                </Grid>
-              </Grid>
-              {InPreparation.map((p, i) =>
-                <Grid container key={i}>
-                  <Grid item xs={12} sm={4}><Text italic>{p.author}</Text></Grid>
-                  <Grid item xs={12} sm={8}><Text>{p.title}</Text></Grid>
-                </Grid>
-              )}
-            </Grid>
-
-            <Grid item xs={12}>
-              <Grid container>
-                <Grid item>
-                  <Text bold p>Announcements</Text>
-                </Grid>
-              </Grid>
-              {Announcements.map((a, i) =>
-                a.link ?
-                // <Link href={a.link}>
-                  <Announcement key={i} date={a.date} message={a.message} link={a.link}/>
-                // </Link>
-                :
-                <Announcement key={i} date={a.date} message={a.message}/>
-              )}
-            </Grid>
-
-          </Grid>
+        <Grid item xs={12} sm={6}>
+          <Text display bold p>To purchase a book contact us via email or on instagram.</Text>
+          <a href="mailto:figurepress@gmail.com"><Text display bold>figurepress@gmail.com</Text></a>
+          <a href="https://www.instagram.com/figurepress/"><Text display bold>@figurepress</Text></a>
         </Grid>
 
       </Grid>
@@ -68,30 +28,3 @@ const Introduction = () => {
 }
 
 export default Introduction
-
-const InPreparation = [
-  {
-    author: "Taylor Zanke",
-    // title: "Untitled"
-  },
-  {
-    author: "Matthew Ransom",
-    // title: "Untitled"
-  }
-]
-
-const Announcements = [
-  {
-    date: "August 2021",
-    message: "Figures is available for purchase here on our website.",
-    // link: "/#figures"
-  },
-  {
-    date: "May 2021",
-    message: "Figures has been sent to print at Brilliant Graphics in Exton, Pennsylvania.",
-  },
-  {
-    date: "December 2020",
-    message: "Our debut, self-titled, book Figures is due for release in early 2021. Final designs are underway!",
-  }
-]
