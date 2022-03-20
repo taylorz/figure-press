@@ -9,6 +9,7 @@ import {
 import Introduction from '../components/Introduction'
 import BookItem from '../components/BookItem'
 import Team from '../components/Team'
+import Footer from '../components/Footer'
 
 const Homepage = ({}) => {
 
@@ -48,6 +49,8 @@ const Homepage = ({}) => {
         </Section>
 
         {/* <Team /> */}
+
+        <Footer />
 
       </PageContainer>
 
