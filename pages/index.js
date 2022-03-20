@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
-// import { useShopify } from "../hooks"
+
 import {
   PageContainer,
   Grid,
@@ -12,14 +11,6 @@ import Team from '../components/Team'
 import Footer from '../components/Footer'
 
 const Homepage = ({}) => {
-
-  // const { products, fetchProduct, cartStatus, cartCount } = useShopify()
-
-  // const ogImg = products[0].images[0].src
-
-  // console.log(products[0].images[0].src)
-  // console.log({cartCount})
-  // console.log("ogImg", ogImg)
 
   return (
 
